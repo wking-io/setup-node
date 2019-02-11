@@ -224,16 +224,11 @@ main() {
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
     # Check if this script was run directly (./<path>/setup.sh),
-    # and if not, it most likely means that the setup were not
+    # and if not, it most likely means that the setup was not
     # yet set up, and they will need to be downloaded.
 
     printf "%s" "${BASH_SOURCE[0]}" | grep "main.sh" &> /dev/null \
         || download_setup
-
-    
-    # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-
-    ./local.sh
 
     # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
